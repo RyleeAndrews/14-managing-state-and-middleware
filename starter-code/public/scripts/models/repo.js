@@ -6,6 +6,7 @@ var app = app || {};
   repos.all = [];
 
   // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //this function hits the get about route and populates with our github api. It is being called in the aboutController. It is not calling anyother functions. 
   repos.requestRepos = function(callback) {
     $.get('/github/user/repos')
     .then(data => repos.all = data, err => console.error(err))

@@ -6,6 +6,7 @@ var app = app || {};
 
   // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // (put your response in a comment here)
+  //So this function is populating the index page when routed to then turns the url to /articles. It is being called in the routes.js file. Yes the app.articleView.index which can be found in articleView.js.
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -17,6 +18,7 @@ var app = app || {};
 
     // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
     // (put your response in a comment here)
+    //This function is saying that you can go /the specific article_id of an article and it will route you to that article. It is being called in routes.js files in all the routes that have a semi colon. It does not call any other functions. 
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 

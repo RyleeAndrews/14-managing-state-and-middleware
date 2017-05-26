@@ -5,6 +5,7 @@ var app = app || {};
   const newArticle = {};
 
   // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //this function shows our inputs to create a new article then whatever we put into those fields it turns into json when we submit. So this function is called at the bottom of this file. It does not call any other functions. 
   newArticle.initNewArticlePage = function() {
     $('.tab-content').show();
     $('#export-field').hide();

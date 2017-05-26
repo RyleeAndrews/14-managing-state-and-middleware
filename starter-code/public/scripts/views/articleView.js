@@ -5,6 +5,7 @@ var app = app || {};
   const articleView = {};
 
   // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //this function compiles the template and then publishes and says this many days ago or just is marked as a draft. It is being called in articleView.index which is then called to the routes. It does not call anything else. 
   const render = function(article) {
     let template = Handlebars.compile($('#article-template').text());
 
